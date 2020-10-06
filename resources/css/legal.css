@@ -1,0 +1,40 @@
+#mentionslegales *{
+    font-size: 16px;
+    font-family: 'Roboto', 'Roboto Slab', sans-serif;
+}
+#mentionslegales h1,h2,h3{
+    font-weight: bold;
+}
+#mentionslegales h1,h2{
+    margin-top: 48px;
+    margin-bottom: 24px;
+}
+#mentionslegales h1{
+    font-size: 32px;
+}
+#mentionslegales h2{
+    font-size: 27px;
+}
+#mentionslegales h3{
+    font-size: 23px;
+    margin-bottom: 16px;
+}
+#mentionslegales img{
+    width: 100%;
+    height: auto;
+    margin: 24px 0px;
+}
+
+
+/***********Media queries***********/
+@media (min-width: 576px){
+	#mentionslegales h1{
+        font-size: 35px;
+    }
+	#mentionslegales h2{
+        font-size: 30px;
+    }
+	#mentionslegales h3{
+        font-size: 25px;
+    }
+}

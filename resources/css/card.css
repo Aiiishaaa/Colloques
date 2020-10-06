@@ -1,0 +1,69 @@
+.card-custom-infos {
+  font-size: 0.8rem;
+}
+
+.card-custom-img-block {
+  position: relative;
+}
+
+.card-custom-link {
+  --icon-w: 2.6rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  white-space: nowrap;
+  display: inline-block;
+  max-width: var(--icon-w);
+  height: var(--icon-w);
+  line-height: var(--icon-w);
+  border-radius: var(--icon-w);
+  margin: 0.5em;
+  padding-right: 1em;
+  -webkit-transition: max-width 0.2s ease-in-out;
+  transition: max-width 0.2s ease-in-out;
+  overflow: hidden;
+  background: var(--light);
+  color: #000;
+  text-decoration: none;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.card-custom-link:last-of-type {
+  direction: rtl;
+  padding-right: 0;
+  padding-left: 1em;
+  left: unset;
+  right: 50%;
+}
+
+.card-custom-link:only-of-type {
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+}
+
+.card-custom-link:hover {
+  max-width: 20rem;
+  color: #000;
+  text-decoration: none;
+}
+
+.card-custom-theme::after {
+  content: " \2022 ";
+  color: #000;
+}
+
+.card-custom-theme:last-child::after {
+  content: "";
+}
+
+.card-custom-link-text {
+  font-size: 0.8rem;
+  margin: 0 -0.3em;
+}
+
+.card-custom-link-icon {
+  width: var(--icon-w);
+  text-align: center;
+}
+/*# sourceMappingURL=card.css.map */

@@ -1,0 +1,12 @@
+.intervenant__pic {
+	height:140px;
+	width:140px;
+	border-radius: 50%;
+	margin:auto ;
+	background-size: cover;
+	background-position: center;
+}
+
+.intervenant__text {
+	font-size: 0.82rem;
+}

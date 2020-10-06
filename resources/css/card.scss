@@ -1,0 +1,76 @@
+// Card custom classes
+
+.card-custom {
+  &-infos {
+    font-size: 0.8rem;
+  }
+
+  &-img-block {
+    position: relative;
+  }
+
+  &-link {
+    // Taille du lien/bouton
+    --icon-w: 2.6rem;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    white-space: nowrap;
+    display: inline-block;
+
+    max-width: var(--icon-w);
+    height: var(--icon-w);
+    line-height: var(--icon-w);
+    border-radius: var(--icon-w);
+    margin: 0.5em;
+    padding-right: 1em;
+
+    transition: max-width 0.2s ease-in-out;
+    overflow: hidden;
+    background: var(--light);
+    color: #000;
+    text-decoration: none;
+    transform: translate(0, -50%);
+
+    &:last-of-type {
+      direction: rtl;
+      padding-right: 0;
+      padding-left: 1em;
+      left: unset;
+      right: 50%;
+    }
+
+    //S'il n'y a qu'un lien
+    &:only-of-type {
+      transform: translate(50%, -50%);
+    }
+
+    &:hover {
+      max-width: 20rem;
+      color: #000;
+      text-decoration: none;
+    }
+  }
+
+  &-theme {
+    &::after {
+      content: " \2022 ";
+      color: #000;
+    }
+
+    &:last-child::after {
+      content: "";
+    }
+  }
+
+  &-link-text {
+    font-size: 0.8rem;
+    margin: 0 -0.3em; // voir s'il y a pas mieux comme méthode
+  }
+
+  &-link-icon {
+    width: var(--icon-w);
+    text-align: center;
+  }
+}

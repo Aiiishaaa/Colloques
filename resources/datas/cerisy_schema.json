@@ -1,0 +1,996 @@
+	{
+		"_id" : "6bWntY1Jk",
+		"schema" : {
+			"attributes" : [
+				{
+					"isName" : true,
+					"isMandatory" : true,
+					"system" : false,
+					"hidden" : false,
+					"name" : "name",
+					"label" : "Nom",
+					"type" : {
+						"tag" : "text",
+						"rich" : false
+					}
+				},
+				{
+					"isName" : false,
+					"isMandatory" : false,
+					"system" : false,
+					"hidden" : false,
+					"name" : "description",
+					"label" : "Description",
+					"type" : {
+						"tag" : "text",
+						"rich" : true
+					}
+				},
+				{
+					"isName" : false,
+					"isMandatory" : true,
+					"system" : false,
+					"hidden" : false,
+					"type" : {
+						"tag" : "enum",
+						"values" : [
+							{
+								"value" : "image",
+								"label" : "image",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "son",
+								"label" : "son",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "video",
+								"label" : "video",
+								"saved" : true
+							},
+							{
+								"value" : "texte",
+								"label" : "texte",
+								"saved" : true
+							},
+							{
+								"value" : "pdf",
+								"label" : "pdf",
+								"saved" : true
+							},
+							{
+								"value" : "lien-externe",
+								"label" : "lien externe",
+								"saved" : true
+							}
+						],
+						"multi" : false
+					},
+					"name" : "type",
+					"uid" : "AaqmfhXq5",
+					"label" : "Type"
+				},
+				{
+					"isName" : false,
+					"isMandatory" : true,
+					"system" : false,
+					"hidden" : false,
+					"type" : {
+						"tag" : "text",
+						"rich" : false
+					},
+					"name" : "url",
+					"uid" : "6-z6apClE",
+					"label" : "URL"
+				},
+				{
+					"isName" : false,
+					"isMandatory" : true,
+					"system" : false,
+					"hidden" : false,
+					"type" : {
+						"tag" : "enum",
+						"values" : [
+							{
+								"value" : "11livreintro",
+								"label" : "1.1 Livre intro",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "12livreglossaire",
+								"label" : "1.2 Livre glossaire",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "13livrechapitre1",
+								"label" : "1.3 Livre chapitre 1",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "14livrechapitre2",
+								"label" : "1.4 livre chapitre 2",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "15livrechapitre3",
+								"label" : "1.5 Livre chapitre 3",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "16poemes",
+								"label" : "1.6 poèmes",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "17livretextescl",
+								"label" : "1.7 Livre textes CL",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "18livreconclusion",
+								"label" : "1.8 Livre conclusion",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "21territoiresdecouverte",
+								"label" : "2.1 territoires découverte",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "22territoiresquestion1",
+								"label" : "2.2 territoires question 1",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "23territoiresquestion2",
+								"label" : "2.3 territoires question 2",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "24territoiresquestion3",
+								"label" : "2.4 territoires question 3",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "25territoirevideocolloque",
+								"label" : "2.5 territoire vidéo colloque",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "26territoirevideoexterne",
+								"label" : "2.6 territoire vidéo externe",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "31approchesdescommuns",
+								"label" : "3.1 approches des communs",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "32approchesdelasolidarite",
+								"label" : "3.2 approches de la solidarité",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "33translocalisme",
+								"label" : "3.3 translocalisme",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "34thematiquesabordees",
+								"label" : "3.4 thématiques abordées",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "41vecteurdemocratie",
+								"label" : "4.1 vecteur démocratie",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "42vecteurecologie",
+								"label" : "4.2 vecteur écologie",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "43vecteurcooperation",
+								"label" : "4.3 vecteur coopération",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "44vecteurnumerique",
+								"label" : "4.4 vecteur numérique",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "51matricetemps",
+								"label" : "5.1 Matrice -temps",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "52matricevaleur",
+								"label" : "5.2 Matrice - valeur",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "53matricesavoirs",
+								"label" : "5.3 Matrice - savoirs",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "54matricevaleurs",
+								"label" : "5.4 Matrice - valeurs",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "55matriceinstitutions",
+								"label" : "5.5 Matrice - institutions",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "56matricealterites",
+								"label" : "5.6 Matrice - altérités",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "57matricesensible",
+								"label" : "5.7 Matrice - sensible",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "58matriceoutilsdegestion",
+								"label" : "5.8 Matrice -  outils de gestion",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "61hervedefalvard",
+								"label" : "6.1  Hervé Defalvard",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "62elisabettabuccolo",
+								"label" : "6.2  Elisabetta Buccolo",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "63genevievefontaine",
+								"label" : "6.3 Geneviève  Fontaine",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "64philippechemla",
+								"label" : "6.4 Philippe Chemla",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "65barbarabinbarrois",
+								"label" : "6.5 Barbara Bin Barrois",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "66fatimamostafaoui",
+								"label" : "6.6 Fatima Mostafaoui",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "67rachidcherfaoui",
+								"label" : "6.7 Rachid Cherfaoui",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "68claudesicart",
+								"label" : "6.8 Claude Sicart",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "69danielleguillou",
+								"label" : "6.9 Daniel Le Guillou",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "610jeanlouislaville",
+								"label" : "6.10 Jean-Louis Laville",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "611philippeeynaud",
+								"label" : "6.11 Philippe Eynaud",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "612stephaneveyer",
+								"label" : "6.12 Stéphane Veyer",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "613gheorgheciascai",
+								"label" : "6.13 Gheorghe Ciascai",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "614giuseppelirosi",
+								"label" : "6.14 Giuseppe Li Rosi",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "615marclourdaux",
+								"label" : "6.15 Marc Lourdaux",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "616pedrohespanha",
+								"label" : "6.16 Pedro Hespanha",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "617stephanieleyronas",
+								"label" : "6.17 Stéphanie Leyronas",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "618lionelmaurel",
+								"label" : "6.18 Lionel Maurel",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "619jeanfrancoisdraperi",
+								"label" : "6.19 Jean-François Draperi",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "620lauraaufrere",
+								"label" : "6.20 Laura Aufrère",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "621cecileoffroy",
+								"label" : "6.21 Cécile Offroy",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "622raphaëllhomme",
+								"label" : "6.22 Raphaël Lhomme",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "623sylvainbaudet",
+								"label" : "6.23 Sylvain Baudet",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "624fabienjouron",
+								"label" : "6.24 Fabien Jouron",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "625ericlesueur",
+								"label" : "6.25 Eric Lesueur",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "626nicolaschochoy",
+								"label" : "6.26 Nicolas Chochoy",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "627silkehelfrich",
+								"label" : "6.27 Silke Helfrich",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "628francoisxavierviallon",
+								"label" : "6.28 François-Xavier Viallon",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "629corinnebebin",
+								"label" : "6.29 Corinne Bébin",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "630ericbonneau",
+								"label" : "6.30 Eric Bonneau",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "631olivierbenoit",
+								"label" : "6.31 Olivier Benoit",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "632camillefontenelle",
+								"label" : "6.32 Camille Fontenelle",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "633josephhaeringer",
+								"label" : "6.33 Joseph Haeringer",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "634jacquesjouet",
+								"label" : "6.34 Jacques Jouet",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "635arnaudassie",
+								"label" : "6.35 Arnaud Assié",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "636michelcarre",
+								"label" : "6.36 Michel Carré",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "637pierreguelman",
+								"label" : "6.37 Pierre Guelman",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "638faneliecarreyconte",
+								"label" : "6.38 Fanélie Carrey-Conte",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "639melainecervera",
+								"label" : "6.39 Melaine Cervera",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "640isabelledelannoy",
+								"label" : "6.40 Isabelle Delannoy",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "641denisdupre",
+								"label" : "6.41 Denis Dupré",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "642mariefare",
+								"label" : "6.42 Marie Fare",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "643nicolealix",
+								"label" : "6.43 Nicole Alix",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "644denisdurand",
+								"label" : "6.44 Denis Durand",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "645sylviebarros",
+								"label" : "6.45 Sylvie Barros",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "646benedettacelati",
+								"label" : "6.46 Benedetta Celati",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "647maïtejuan",
+								"label" : "6.47 Maïté Juan",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "648anadubeux",
+								"label" : "6.48 Ana Dubeux",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "649colinrobineau",
+								"label" : "6.49 Colin Robineau",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "650benjamincoriat",
+								"label" : "6.50 Benjamin Coriat",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "651vivianehamon",
+								"label" : "6.51 Viviane Hamon",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "652jeanlouisbancel",
+								"label" : "6.52 Jean-Louis Bancel",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "653noemiedegrenier",
+								"label" : "6.53 Noémie de Grenier",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "654lescapteursdeliens",
+								"label" : "6.54 les capteurs de liens",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "655edithheurgon",
+								"label" : "6.55 Edith Heurgon",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "656lechâteaudecerisy",
+								"label" : "6.56 Le château de Cerisy",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "657lequipedecerisy",
+								"label" : "6.57 l'équipe de Cerisy",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "59-matrice-espaces",
+								"label" : "5.9 Matrice - Espaces",
+								"saved" : true
+							},
+							{
+								"value" : "658-participants-non-intervenants",
+								"label" : "6.58 Participants non intervenants",
+								"saved" : true
+							},
+							{
+								"value" : "01-elements-de-mode-demploi",
+								"label" : "0.1 Éléments de mode d'emploi",
+								"saved" : true
+							},
+							{
+								"value" : "02-ecoute-integrale",
+								"label" : "0.2 Ecoute intégrale",
+								"saved" : true
+							}
+						],
+						"multi" : true
+					},
+					"name" : "thematique",
+					"uid" : "SXEboe9ef",
+					"label" : "Thématique"
+				},
+				{
+					"isName" : false,
+					"isMandatory" : true,
+					"system" : false,
+					"hidden" : false,
+					"type" : {
+						"tag" : "enum",
+						"values" : [
+							{
+								"value" : "makingoffducolloqueintroduction",
+								"label" : "Making off du colloque",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "tr1ressourcesdesterritoiresareveler",
+								"label" : "TR 1 - Ressources des territoires à révéler",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "tr2territoiressolidairesetemploi",
+								"label" : "TR 2 - Territoires solidaires et emploi",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "pleniere1democratieetsolidarite",
+								"label" : "Plénière 1 - Démocratie et solidarité",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "dp1formesdesolidariteetcommun",
+								"label" : "DP 1 - Formes de solidarité et commun",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "tr4systemesalimentairessolidairesterritorialises",
+								"label" : "TR 4 - Systèmes alimentaires solidaires territorialisés",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "dp2regardscroisesnordsuduneepistemologiecommune",
+								"label" : "DP 2 - Regards croisés Nord-Sud, une épistémologie commune?",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "pleniere2faireatterirlescommunsnumeriques",
+								"label" : "Plénière 2 - Faire attérir les communs numériques",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "pleniere3letempsdesmesorepubliquesintercooperatives",
+								"label" : "Plénière 3 - Le temps des méso-républiques inter-coopératives",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "tr5cultureetcommundanslesterritoires",
+								"label" : "TR 5 - Culture et commun dans les territoires",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "tr6grandeentrepriseetterritoire",
+								"label" : "TR 6 - Grande entreprise et territoire",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "dp3valeursetcommunspourlesterritoires",
+								"label" : "DP 3 - Valeurs et communs pour les territoires",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "enjeuxetcontroverses1",
+								"label" : "Enjeux et controverses - 1",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "dp4pouvoirspublicsetcommun",
+								"label" : "DP 4 - Pouvoirs publics et commun",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "tr7echellesterritorialesdelasanteencommun",
+								"label" : "TR 7 - Echelles territoriales de la santé en commun",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "tr8habiterencommunlesterritoires",
+								"label" : "TR 8 - Habiter en commun les territoires",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "horslesmursvisitesdeterrains",
+								"label" : "Hors les murs - visites de terrains",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "soireeavecjacquesjouet",
+								"label" : "Soirée avec Jacques Jouet",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "tr3energiedurableetterritoire",
+								"label" : "TR 3 - Energie durable et territoire",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "dp5emancipationetcommun",
+								"label" : "DP 5- Emancipation et commun",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "pleniere4economiesymbiotiqueecologieetcommun",
+								"label" : "Plénière 4 - Economie symbiotique, écologie et commun",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "dp6monnaieetcommun",
+								"label" : "DP 6 - Monnaie et commun",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "dp7criteresetoutilsdegestionetcommun",
+								"label" : "DP 7 - Critères et outils de gestion et commun",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "enjeuxetcontroverses2pouvoirspublicsetcommuns",
+								"label" : "Enjeux et controverses 2 - Pouvoirs publics et communs",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "tr9frichesencommunetterritoires",
+								"label" : "TR 9 - Friches en commun et territoires",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "tr10educationpopulaireconstruireunmondecommun",
+								"label" : "TR 10 - Education populaire, construire un monde commun",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "dp8droitcommunetterritoire",
+								"label" : "DP 8 - Droit, commun et territoire",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "dp9cooperativesetcommunpourquellessolidarites",
+								"label" : "DP 9 - Coopératives et commun pour quelles solidarités?",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "soireepoemes",
+								"label" : "Soirée Poémes",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "rapportsdetonnements",
+								"label" : "Rapports d'étonnements",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "lesautresmomentsinformels",
+								"label" : "Les autres moments informels",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "lelivre",
+								"label" : "le livre",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "lessuitesducolloque",
+								"label" : "les suites du colloque",
+								"icon" : null,
+								"color" : null,
+								"saved" : true
+							},
+							{
+								"value" : "introduction",
+								"label" : "Introduction",
+								"saved" : true
+							}
+						],
+						"multi" : false
+					},
+					"name" : "timeline",
+					"uid" : "p7DAxVV9A",
+					"label" : "Timeline"
+				}
+			]
+		},
+		"name" : "ressources-colloque-cerisy",
+		"label" : "Ressources Colloque Cerisy",
+		"accessRights" : "wiki",
+		"description" : "",
+		"admins" : [
+			"YsLaskaEZ"
+		]
+	},
+
