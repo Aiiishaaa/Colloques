@@ -20,9 +20,15 @@
 				<div class="aside__date"><a href="<?= base_url("/conference/".$timeline_id) ?>"><?= $timeline ?></a></div>
 			</div>
 		</div>
-        <div class="aside__footer">
-            <button class="aside__share custom-btn btn btn-outline-secondary">
-                <i class="fa fa-share"></i>Partager</button>
-        </div>
+		<!-- AddToAny - Partage sur les réseaux sociaux -->
+		<div class="aside__footer">
+			<a class="a2a_dd" href="https://www.addtoany.com/share">
+				<button class="aside__share custom-btn btn btn-outline-secondary">
+					<i class="fa fa-share " ></i>Partager
+				</button>
+			</a>
+		</div>
+		<script async src="https://static.addtoany.com/menu/page.js"></script>
+		<!-- AddToAny END -->
     </div>
 </div>
