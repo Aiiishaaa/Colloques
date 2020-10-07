@@ -26,6 +26,7 @@ class Maincontroller extends CI_Controller
 		$this->datas["db"] = $this->db_json ;
 		$this->datas["titre"] = "" ;
 		$this->datas["url_resources"] = $this->config->item('base_url_ressource');
+		$this->datas["description_SEO"] = "Bienvenue sur le site du colloque CERISY • TERRITOIRES SOLIDAIRES EN COMMUN" ;
 
 		/***** PARTAGE DANS LES RESEAUX SOCIAUX */
 		$meta_infos = array();
@@ -110,6 +111,7 @@ class Maincontroller extends CI_Controller
 		$this->datas["meta_infos"]["titre"] = $this->datas["titre"] ;
 		$this->datas["name"] = $this->datas["ressource"]->getName() ;
 		$this->datas["meta_infos"]["image"] = $this->datas["url_resources"]. "img/timeline/".$this->datas["ressource"]->getTimelineId().".JPG" ;
+		$this->datas["description_SEO"] = strip_tags($this->datas["ressource"]->getDescription()) ;
 		$has_contributors = false ;
 		foreach ($this->datas["ressource"]->getThematiques() as $key => $value) {
 			if (strpos($key, "6") !== false) {
