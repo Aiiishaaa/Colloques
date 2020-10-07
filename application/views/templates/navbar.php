@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-12">
                 <nav class="navbar">
-                    <a href="<?= base_url("/") ?>"><img class="img-cerisy" src="<?= base_url("/resources/img/img-1.jpg") ?>" alt="Les colloques CERISY"></a>
+                    <a href="<?= base_url("/") ?>"><img class="img-cerisy" src="<?= base_url("/resources/img/logo-cerisy-200.png") ?>" alt="Les colloques CERISY"></a>
                     <form class="form-inline" action="<?= base_url("/rechercher") ?>" method="GET">
                         <p class="title-search">Recherche</p>
                         <input type="search" name="search" class="form-control" placeholder="Date, intervenant, titre..." aria-label="Recherche">

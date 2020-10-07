@@ -30,12 +30,12 @@ header {
 }
 
 .partenaire1 {
-    width:50px;
+    /*width:50px;*/
 }
 
 .partenaire2 {
     vertical-align: bottom;
-    width: 100px;
+    /*width: 100px;*/
 }
 
 .lien {
@@ -105,6 +105,9 @@ header {
 .img-cerisy-footer{
   display: block;
   width: 130px;
+}
+.logo-footer {
+	height: 80px;
 }
 @media screen and (max-width: 576px){
   /* ==========
