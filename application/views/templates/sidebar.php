@@ -58,12 +58,16 @@
             </div>
         </div>
 		<?php } ?>
+
+		<?php if (! ($ressource->getType() == "video" && FALSE !== strpos($ressource->getUrl(), "youtube"))) { ?>
 		<div class="aside__footer">
 			<a href="<?= $ressource->getUrl() ?>/download">
 				<button class="aside__share custom-btn btn btn-outline-secondary">
 					<i class="fa fa-share"></i>Télécharger</button>
 			</a>
 		</div>
+		<?php } ?>
+
         <div class="aside__footer">
             <button class="aside__share custom-btn btn btn-outline-secondary">
                 <i class="fa fa-share"></i>Partager</button>

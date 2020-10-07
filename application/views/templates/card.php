@@ -51,11 +51,18 @@ if (isset($type_ressource))
 
     <div class="card-custom-img-block">
         <img src="<?= $url_resources."img/timeline/".$ressource->getTimelineId().".JPG" ?>" alt="placeholder" class="card-img card-custom-img">
-		<a href="<?= $ressource->getUrl() ?>/download" class="card-custom-link">
-			<i class="fa fa-download card-custom-link-icon"></i>
-			<span class="card-custom-link-text">Télécharger</span>
-		</a>
 
+		<?php if ($type_ressource == "video" && FALSE !== strpos($ressource->getUrl(), "youtube")) { ?>
+			<a href="<?= $ressource->getUrl() ?>" target="_blank" class="card-custom-link">
+				<i class="fa <?= $icon_ressource ?> card-custom-link-icon"></i>
+				<span class="card-custom-link-text">Youtube</span>
+			</a>
+		<?php } else { ?>
+			<a href="<?= $ressource->getUrl() ?>/download" class="card-custom-link">
+				<i class="fa fa-download card-custom-link-icon"></i>
+				<span class="card-custom-link-text">Télécharger</span>
+			</a>
+		<?php } ?>
 		<a href="<?= base_url("/ressource/".$ressource->getId()) ?>" class="card-custom-link" >
             <i class="fa <?= $icon_ressource ?> card-custom-link-icon"></i>
             <span class="card-custom-link-text"><?= $verbe ?></span>
