@@ -25,7 +25,13 @@ class Maincontroller extends CI_Controller
 		$this->db_json = new DatabaseJSON(base_url("/resources/datas/cerisy.json"), base_url("/resources/datas/cerisy_schema.json")) ;
 		$this->datas["db"] = $this->db_json ;
 		$this->datas["titre"] = "" ;
-		$this->datas["url_resources"] = $this->config->item('base_url_ressource'); ;
+		$this->datas["url_resources"] = $this->config->item('base_url_ressource');
+
+		/***** PARTAGE DANS LES RESEAUX SOCIAUX */
+		$meta_infos = array();
+		$meta_infos["titre"] = "" ;
+		$meta_infos["image"] = $this->datas["url_resources"]."img/mentions-legales.JPG" ;
+		$this->datas["meta_infos"] = $meta_infos ;
 	}
 
 	/**
@@ -45,33 +51,40 @@ class Maincontroller extends CI_Controller
 	 */
 	public function index()
 	{
-		$this->load->view('templates/header');
-		$this->load->view('index');
-		$this->load->view('templates/footer');
+		$this->datas["meta_infos"]["titre"] = "Accueil" ;
+		$this->datas["titre"] = "Accueil" ;
+		$this->load->view('templates/header', $this->datas);
+		$this->load->view('index', $this->datas);
+		$this->load->view('templates/footer', $this->datas);
 	}
 
 	public function page()
 	{
 
-		$this->load->view('templates/header');
-		$this->load->view('page');
-		$this->load->view('templates/footer');
+		$this->load->view('templates/header', $this->datas);
+		$this->load->view('page', $this->datas);
+		$this->load->view('templates/footer', $this->datas);
 	}
 
 	public function mentionslegales()
 	{
-
-		$this->load->view('templates/header');
-		$this->load->view('mentionslegales');
-		$this->load->view('templates/footer');
+		$this->datas["meta_infos"]["titre"] = "Mentions légales" ;
+		$this->datas["titre"] = "Mentions légales" ;
+		$this->load->view('templates/header', $this->datas);
+		$this->load->view('mentionslegales', $this->datas);
+		$this->load->view('templates/footer', $this->datas);
 	}
 
 	public function contact()
 	{
+
 		// le traitement du formulaire doit être fait ici et non pas dans la vue
-		$this->load->view('templates/header');
-		$this->load->view('contact');
-		$this->load->view('templates/footer');
+		$this->datas["meta_infos"]["titre"] = "Contact" ;
+		$this->datas["titre"] = "Contact" ;
+
+		$this->load->view('templates/header', $this->datas);
+		$this->load->view('contact', $this->datas);
+		$this->load->view('templates/footer', $this->datas);
 	}
 
 	public function thematique($thematique_id)
@@ -80,6 +93,7 @@ class Maincontroller extends CI_Controller
 		$this->datas["thematique"] = $this->db_json->getThematique($thematique_id) ;
 		$this->datas["titre"] = "Thématique ".$this->datas["thematique"] ;
 		$this->datas["ressources"] = $this->db_json->getRessourcesByThematique($thematique_id) ;
+		$this->datas["meta_infos"]["titre"] = $this->datas["titre"] ;
 
 		// appel aux vues en leur transmettant les données préparées
 		$this->load->view('templates/header', $this->datas);
@@ -93,7 +107,9 @@ class Maincontroller extends CI_Controller
 		// préparation des données
 		$this->datas["ressource"] = $this->db_json->getRessourceById($ressource_id) ;
 		$this->datas["titre"] = $this->datas["ressource"]->getName() ;
+		$this->datas["meta_infos"]["titre"] = $this->datas["titre"] ;
 		$this->datas["name"] = $this->datas["ressource"]->getName() ;
+		$this->datas["meta_infos"]["image"] = $this->datas["url_resources"]. "img/timeline/".$this->datas["ressource"]->getTimelineId().".JPG" ;
 		$has_contributors = false ;
 		foreach ($this->datas["ressource"]->getThematiques() as $key => $value) {
 			if (strpos($key, "6") !== false) {
@@ -123,6 +139,7 @@ class Maincontroller extends CI_Controller
 		$this->datas["name"] = $this->db_json->getTimeline($timeline_id) ;
 		$this->datas["type_ressource"] = "son" ;
 		$this->datas["titre"] = $this->db_json->getTimeline($timeline_id) ;
+		$this->datas["meta_infos"]["titre"] = $this->datas["titre"] ;
 
 		$timelineDB = new TimelineDB();
 		$timeline_array = $timelineDB->get_timeline($timeline_id) ;
@@ -132,6 +149,7 @@ class Maincontroller extends CI_Controller
 		$this->datas["timeline"] = $this->db_json->getTimeline($timeline_id) ;
 		$this->datas["edition"] = $timeline_array["edition"] ;
 		$this->datas["date"] = $timeline_array["date"] ;
+		$this->datas["meta_infos"]["image"] = $this->datas["url_resources"]. "img/timeline/".$timeline_id.".JPG" ;
 
 		// appel aux vues en leur transmettant les données préparées
 		$this->load->view('templates/header', $this->datas);
@@ -149,8 +167,10 @@ class Maincontroller extends CI_Controller
 		$this->datas["name"] = $this->db_json->getThematique($intervenant_id) ;
 		$this->datas["type_ressource"] = "" ;
 		$this->datas["titre"] = $this->datas["name"] ;
+		$this->datas["meta_infos"]["titre"] = $this->datas["titre"] ;
 		$intervenant = new IntervenantDB();
 		$this->datas["biographie"] = $intervenant->get_intervenant($intervenant_id)["biographie"] ;
+		$this->datas["meta_infos"]["image"] = $this->datas["url_resources"]. "img/intervenants/".$intervenant_id.".JPG" ;
 
 		// appel aux vues en leur transmettant les données préparées
 		$this->load->view('templates/header', $this->datas);
@@ -171,6 +191,7 @@ class Maincontroller extends CI_Controller
 		// préparation des données
 		$this->datas["thematique"] = "Résultats de la recherche pour \"".$keywords."\"" ;
 		$this->datas["titre"] = "Résultats de la recherche pour \"".$keywords."\"" ;
+		$this->datas["meta_infos"]["titre"] = $this->datas["titre"] ;
 		$this->datas["icon"] = "fas fa-search" ;
 		$this->datas["ressources"] = $this->db_json->search($keywords) ; // on effectue la recherche sur la DB et on transmet le résultat à la vue
 

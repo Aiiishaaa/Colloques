@@ -20,6 +20,24 @@
 	<link rel="stylesheet" type="text/css" href="<?= base_url("/resources/css/themebar.css") ?>">
 	<script src="<?= base_url("/resources/js/script.js") ?>"></script>
 	<link rel="icon" href="<?= base_url("/resources/img/favicon.gif") ?>" />
+
+	<?php if(isset($meta_infos)) { ?>
+	<!---- CODE OPEN GRAPH (FACEBOOK) -->
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="<?= $meta_infos["titre"] ?>">
+	<meta property="og:site_name" content="Les colloques CERISY • TERRITOIRES SOLIDAIRES EN COMMUN">
+	<meta property="og:url" content="<?= $_SERVER['REQUEST_URI'] ?>">
+	<meta property="og:image" content="<?= $meta_infos["image"] ?>">
+	<meta property="article:published_time" content="2020-10-15">
+
+	<!---- CODE TWITTER CARD ---->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@"> <!-- saisir le nom du compte twitter -->
+	<meta name="twitter:title" content="Les colloques CERISY • <?= $meta_infos["titre"] ?>">
+	<meta name="twitter:description" content="Retrouvez <?= $meta_infos["titre"] ?>">
+	<meta name="twitter:image" content="<?= $meta_infos["image"] ?>">
+	<?php } ?>
+
 </head>
 
 <body>
