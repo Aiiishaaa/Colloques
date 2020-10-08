@@ -21,6 +21,7 @@
 	<link rel="stylesheet" type="text/css" href="<?= base_url("/resources/css/themebar.css") ?>">
 	<script src="<?= base_url("/resources/js/script.js") ?>"></script>
 	<link rel="icon" href="<?= base_url("/resources/img/favicon.gif") ?>" />
+	<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">-->
 
 	<?php if(isset($meta_infos)) { ?>
 	<!---- CODE OPEN GRAPH (FACEBOOK) -->
