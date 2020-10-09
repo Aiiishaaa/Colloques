@@ -1,0 +1,160 @@
+
+/**** Timeline****/
+
+h6 {
+	text-align: center;
+	padding-top: 18px;
+}
+
+h4 {
+	text-align: center;
+	font-weight: bold;
+	padding-bottom: 20px;
+}
+
+.timeline {
+	position: relative;
+	max-width: 70em;
+	margin: 0 auto;
+}
+
+.timeline ul li {
+	margin-bottom: 10px;
+	list-style-type: none;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.timeline ul li .content {
+	width: 50%;
+}
+
+.timeline ul li:nth-child(odd) {
+	align-items: center;
+	margin-right: 0;
+}
+
+.timeline ul li:nth-child(even) {
+	display: flex;
+	flex-direction: row-reverse;
+	margin-left: 20%;
+}
+
+.point {
+	width: 20px;
+	height: 20px;
+	background-color: #ffffff;
+	border-radius: 100%;
+	border: 3px #2c5c19 solid;
+	position: absolute;
+	left: 49.2%;
+}
+
+
+/* after : créer un élement pour présenter la ligne en pointillé*/
+
+.timeline ul li:first-child::after {
+	content: "";
+	position: absolute;
+	border-bottom: 1px dashed #948e8e;
+	width: 6em;
+	left: 25.8em;
+	top: 15em;
+}
+
+
+/* before : créer un élement pour présenter le petit rond en vert*/
+
+.timeline ul li:first-child::before {
+	content: "";
+	width: 12px;
+	height: 12px;
+	background-color: #f8f2f2;
+	border-radius: 100%;
+	border: 3px #2c5c19 solid;
+	position: absolute;
+	left: 63.6%;
+	top: 14.7em;
+}
+
+.timeline ul li:nth-child(2n)::after {
+	content: "";
+	position: absolute;
+	border-bottom: 1px dashed #948e8e;
+	width: 7em;
+	left: 19.4em;
+	top: 51%;
+}
+
+.timeline ul li:nth-child(2n)::before {
+	content: "";
+	width: 12px;
+	height: 12px;
+	background-color: #ffffff;
+	border-radius: 100%;
+	border: 3px #2c5c19 solid;
+	position: absolute;
+	left: 37.1%;
+	top: 50%;
+}
+
+.timeline ul li:nth-child(2n+1):after {
+	content: "";
+	position: absolute;
+	border-bottom: 1px dashed #948e8e;
+	width: 7.5em;
+	left: 24.5em;
+	top: 51%;
+}
+
+.timeline ul li:nth-child(2n+1)::before {
+	content: "";
+	width: 12px;
+	height: 12px;
+	background-color: #ffffff;
+	border-radius: 100%;
+	border: 3px #2c5c19 solid;
+	position: absolute;
+	left: 63.7%;
+	top: 50%;
+}
+
+.timeline::before {
+	content: "";
+	position: absolute;
+	height: 60em;
+	width: 3px;
+	left: 50%;
+	background-color: #2c5c19;
+}
+
+.date1 {
+	margin-top: 18em;
+	margin-left: 0.8em;
+}
+
+.timeline2::after {
+	content: "";
+	position: absolute;
+	height: 36em;
+	width: 3px;
+	top: 70em;
+	left: 50%;
+	background-color: #2c5c19;
+}
+
+.date2 {
+	margin-top: 18em;
+	margin-left: 2.5em;
+}
+
+.timeline3::after {
+	content: "";
+	position: absolute;
+	height: 55em;
+	width: 3px;
+	top: 115em;
+	left: 50%;
+	background-color: #2c5c19;
+}

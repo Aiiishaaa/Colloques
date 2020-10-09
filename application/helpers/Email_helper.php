@@ -34,8 +34,8 @@ if ( ! function_exists('send_mail')) {
 		$mail->Username   = $username;
 		$mail->Password   = $password;
 
-		$mail->SetFrom($username, $username);
-		$mail->AddReplyTo($username,$username);
+		$mail->SetFrom($username, "Territoire solidaire en commun");
+		$mail->AddReplyTo($to,$to);
 		$mail->Subject    = $subject;
 		$mail->MsgHTML($body);
 		$address = $to;

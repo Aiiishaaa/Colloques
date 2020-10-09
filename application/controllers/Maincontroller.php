@@ -83,6 +83,84 @@ class Maincontroller extends CI_Controller
 		$this->datas["meta_infos"]["titre"] = "Contact" ;
 		$this->datas["titre"] = "Contact" ;
 
+
+		/***** messages vars *****/
+		$errName = "";
+		$errSurname = "";
+		$errEmail = "";
+		$errMsg = "";
+		$msgSent = "";
+		$msgSentClass = "";
+		/*******************************/
+
+		if (isset($_POST['submit'])) {
+			/****** Contact mail needed ******/
+			$toEmail = "contact@territoires-solidaires-en-commun.com"; // mettre autre chose pour tester
+
+			/* transfert des variables du POST avec htmlspecialchars */
+			$name = htmlspecialchars($_POST['name']);
+			$surname = htmlspecialchars($_POST['surname']);
+			$email = htmlspecialchars($_POST['email']);
+			$msgSubject = htmlspecialchars($_POST['msg-subject']);
+			$msg = htmlspecialchars($_POST['msg']);
+
+			$valid = true; /*si une des verification du formulaire ne passe pas cette variable passera à false */
+			/* verif si prenom vide*/
+			if (empty($name)) {
+				$errName = "Veuillez entrer votre prénom";
+				$valid = false;
+			}
+			/* verif si nom vide */
+			if (empty($surname)) {
+				$errSurname = "Veuillez entrer votre nom";
+				$valid = false;
+			}
+			/* verif du mail */
+			/*si vide*/
+			if (empty($email)) {
+				$errEmail = "Une adresse E-mail est requise";
+				$valid = false;
+				/*si non valide */
+			} else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+				$errEmail = "Veuillez entrer une adresse Email valide. <br>exemple : robert.razosky@unemail.com";
+				$valid = false;
+			}
+			/* verif si message vide */
+			if (empty($msg)) {
+				$errMsg = "Veuillez entrer votre message";
+				$valid = false;
+			}
+
+			/*verif si toute les validation sont passées */
+			if ($valid != false) {
+				$msg = wordwrap($msg, 70);
+				$header = "MIME-version: 1.0" . "/r/n";
+				$header .= "Content-type:text/html;charset=UTF-8" . "/r/n";
+				$subject = "[Territoire solidaire en commun] ".$msgSubject." de " . $name . " " . $surname . " <" . $email . ">";
+				$body = "<h2>Demande de contact<h2>
+                <h4>Nom : </h4><p>" . $name . " " . $surname . "</p>
+                <h4>Email : </h4><p>" . $email . "</p>
+                <h4>Objet : </h4><p>" . $msgSubject . "</p>
+                <h4>Message : </h4><p>" . $msg . "</p>";
+
+				/*envoi du mail - on utilise le meiler GMAIL pour plus de facilité, on peut revenir sur la fonction mail à tout moment si le serveur est bien configuré */
+				if (send_mail($toEmail, $subject, $body)) {
+					//if (mail($toEmail, $subject, $body, $header)) {
+					$msgSent = "Message envoyé";
+					$msgSentClass = "alert-success";
+				} else {
+					$msgSent = "Un problème est survenu, le message n'a pas été envoyé.";
+					$msgSentClass = "alert-danger";
+				}
+			}
+		}
+
+		$this->datas["errName"] = $errName ;
+		$this->datas["errSurname"] = $errSurname ;
+		$this->datas["errEmail"] = $errEmail ;
+		$this->datas["errMsg"] = $errMsg ;
+		$this->datas["msgSent"] = $msgSent ;
+		$this->datas["msgSentClass"] = $msgSentClass ;
 		$this->load->view('templates/header', $this->datas);
 		$this->load->view('contact', $this->datas);
 		$this->load->view('templates/footer', $this->datas);
