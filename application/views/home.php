@@ -1,9 +1,10 @@
-
+	<div class="container text-center">
 <?php
 	foreach ($timelines as $date_array) {
 		$edition = $date_array[0]["edition"] ;
 		$date = $date_array[0]["date"] ;
 ?>
+
 			<div class="custom-edition my-5">
 				<div class="row">
 					<div class="col-12">
@@ -30,5 +31,6 @@
 <?php
 	}
 ?>
+	</div>
 
 

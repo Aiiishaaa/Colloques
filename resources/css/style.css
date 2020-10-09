@@ -115,6 +115,7 @@ header {
     background-color: white;
     z-index: 1000;
   }
+
   /* Element de déco, Navbar, atour de la loupe*/
   .btn-search::before{
     content: "";
