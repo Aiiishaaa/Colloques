@@ -102,7 +102,7 @@ header {
   width: 130px;
 }
 .logo-footer {
-	height: 80px;
+	height: 77px;
 }
 @media screen and (max-width: 576px){
   /* ==========
@@ -140,5 +140,9 @@ header {
  .logo-footer {
      height: 59px;
  }
+
+.logo-footer {
+	height: 3em;
+}
 
 }
