@@ -50,7 +50,7 @@ if (isset($type_ressource))
     </div>
 
     <div class="card-custom-img-block">
-		<div style="background-image: url(<?= $url_resources."img/timeline/".$ressource->getTimelineId().".JPG" ?>)" alt="<?= strip_slashes($ressource->getName()) ?>" class="card-img card-custom-img"></div>
+		<div style="background-image: url(<?= $url_resources."img/timeline/".$ressource->getTimelineId().".JPG" ?>)" alt="<?= $ressource->getName() ?>" class="card-img card-custom-img"></div>
 		<?php if ($type_ressource == "video" && FALSE !== strpos($ressource->getUrl(), "youtube")) { ?>
 			<a href="<?= $ressource->getUrl() ?>" target="_blank" class="card-custom-link">
 				<i class="fa <?= $icon_ressource ?> card-custom-link-icon"></i>

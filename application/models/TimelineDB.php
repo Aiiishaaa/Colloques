@@ -38,6 +38,33 @@ class TimelineDB extends CI_Model{
 
 	}
 
+	public function get_all_timelines_by_date ($only_shown=false)
+	{
+		$result = array() ;
+		$timelines = $this->get_all_timelines() ;
+		$last_date = null ;
+		$current_array = array() ;
+		foreach ($timelines as $conference)
+		{
+			if ($conference["date"] != $last_date)
+			{
+				$last_date = $conference["date"] ;
+				if (! empty($current_array))
+				{
+					array_push($result, $current_array) ;
+				}
+				$current_array = array() ;
+			}
+			array_push($current_array, $conference) ;
+		}
+		if (! empty($current_array))
+		{
+			array_push($result, $current_array) ;
+		}
+		return $result ;
+
+	}
+
 	/***************************************
 	 * Renvoie les données d'une timeline/conférences spécifique en base de données
 	 * @param $id

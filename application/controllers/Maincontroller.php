@@ -54,8 +54,13 @@ class Maincontroller extends CI_Controller
 	{
 		$this->datas["meta_infos"]["titre"] = "Accueil" ;
 		$this->datas["titre"] = "Accueil" ;
+
+		$timeline_db = new TimelineDB() ;
+		$conferences = $timeline_db->get_all_timelines_by_date() ;
+
+		$this->datas["timelines"] = $conferences ;
 		$this->load->view('templates/header', $this->datas);
-		$this->load->view('index', $this->datas);
+		$this->load->view('home', $this->datas);
 		$this->load->view('templates/footer', $this->datas);
 	}
 
