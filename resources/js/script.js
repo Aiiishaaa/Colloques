@@ -14,4 +14,10 @@ $( document ).ready(function() {
 		}
 
 	});
+
+	let flip = true ;
+	$("#mobile-search-btn").on("click", function() {
+		$( "#mobile-search-bar" ).animate({ 'marginTop': flip ? '3.2em' : "0", opacity: 0.5 }, 500);
+		flip = ! flip ;
+	});
 });

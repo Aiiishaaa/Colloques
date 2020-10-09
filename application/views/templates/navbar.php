@@ -7,10 +7,17 @@
                     <form class="form-inline d-flex flex-row flex-nowrap" action="<?= base_url("/rechercher") ?>" method="GET">
                         <p class="title-search d-none d-sm-block">Recherche</p>
                         <input type="search" name="search" class="form-control d-none d-sm-block" placeholder="Date, intervenant, titre..." aria-label="Recherche">
-                        <button class="btn-search btn " type="submit"><i class="fa fa-search"></i></button>
+                        <div class="btn-search btn" id="mobile-search-btn"><i class="fa fa-search"></i></div>
                     </form>
                 </nav>
+
             </div>
+			<!-- Barre de recherche uniquement pour le mobile -->
+			<div class="col-12 d-sm-none d-block">
+				<form class="form-inline d-flex flex-row flex-nowrap" action="<?= base_url("/rechercher") ?>" method="GET">
+					<input id="mobile-search-bar" type="search" name="search" class="w-100 form-control" placeholder="Date, intervenant, titre..." aria-label="Recherche">
+				</form>
+			</div>
         </div>
     </div>
 </header>
