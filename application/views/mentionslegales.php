@@ -16,10 +16,13 @@
 			<h2>Réalisation technique</h2>
 			<h3>SCIC TETRIS avec l'aide de la promotion Développeurs Web & Web Mobile 2020</h3>
 			<p>
-				Nom des contributeurs, <br>
-				Nom des contributeurs, <br>
-				Nom des contributeurs, <br>
-				Nom des contributeurs <br>
+				Cariot Thomas, <br>
+				Dalle Pasqualine Mickael, <br>
+				Dupré Stéphane, <br>
+				Duquesnay Rémi, <br>
+				Hamida Aicha, <br>
+				Hattab Haifa, <br>
+				Moal Mathurin <br>
 			</p>
 			<p>
 				SCIC TETRIS<br>
@@ -75,7 +78,7 @@
             </p>
             <h3>Design</h3>
             <p>
-                Ce design est conçu par <a href="#" target="_blank">Jiyong</a> et est mis à disposition selon les termes de la <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr" target="_blank">licence commons by-nc-sa 4.0</a>
+                Ce design est conçu par <a href="http://www.jiyong.eu/portfolio/" target="_blank">Jiyong</a> et est mis à disposition selon les termes de la <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr" target="_blank">licence commons by-nc-sa 4.0</a>
             </p>
         </div>
     </div>
