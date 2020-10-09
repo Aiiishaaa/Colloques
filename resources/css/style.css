@@ -29,13 +29,8 @@ header {
    
 }
 
-.partenaire1 {
-    /*width:50px;*/
-}
-
 .partenaire2 {
     vertical-align: bottom;
-    /*width: 100px;*/
 }
 
 .lien {
@@ -140,6 +135,10 @@ header {
  .img-cerisy-footer{
    display: block;
    width: 130px;
+ }
+
+ .logo-footer {
+     height: 59px;
  }
 
 }
