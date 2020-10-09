@@ -20,7 +20,6 @@
 	<link rel="stylesheet" type="text/css" href="<?= base_url("/resources/css/aside.css") ?>">
 	<link rel="stylesheet" type="text/css" href="<?= base_url("/resources/css/themebar.css") ?>">
 	<script src="<?= base_url("/resources/js/script.js") ?>"></script>
-	<script src="https://use.typekit.net/bkt6ydm.js"></script>
 	<link rel="icon" href="<?= base_url("/resources/img/favicon.gif") ?>" />
 
 	<?php if(isset($meta_infos)) { ?>
