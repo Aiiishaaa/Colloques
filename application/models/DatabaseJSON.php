@@ -10,6 +10,7 @@ class DatabaseJSON extends CI_Model
 	private $ressources_by_participants ;// tableau contenant toutes les ressources par contributeur
 	private $ressources_by_thematique ;// tableau contenant toutes les ressources d'après une thématique
 	private $ressources_by_timeline ;// tableau contenant toutes les ressources appartenant à une timeline/conférence
+	private $thematiques_by_timeline ;// tableau contenant toutes les thematiques appartenant à une timeline/conférence
 	private $ressources_son ; // tableau contenant toutes les ressources du type son
 	private $ressources_pdf ; // tableau contenant toutes les ressources du type pdf
 	private $ressources_image ; // tableau contenant toutes les ressources du type image
@@ -41,6 +42,7 @@ class DatabaseJSON extends CI_Model
 			$this->ressources_by_participants = array() ;
 			$this->ressources_by_thematique = array() ;
 			$this->ressources_by_timeline = array() ;
+			$this->thematiques_by_timeline = array() ;
 			$this->participants = array() ;
 
 			/************************************************************
@@ -66,14 +68,12 @@ class DatabaseJSON extends CI_Model
 						$id = remove_accents($thematique["value"]) ;
 						$this->thematiques[$id] = ucfirst(trim($titre)) ;
 
-
 						// si la thématique commence par "6." alors c'est un contributeur
 						if (strpos($titre, "6.") !== false)
 						{
 							$titre = preg_replace('#[0-9]*\.[0-9]*#', '', $titre) ;
 							$this->participants[$id] = trim($titre) ;
 						}
-
 					}
 				}
 				else if ($item["name"] == "timeline")
@@ -82,10 +82,8 @@ class DatabaseJSON extends CI_Model
 						$titre = $timeline["label"] ;
 						$id = remove_accents($timeline["value"]) ;
 						$this->timeline[$id] = $titre ;
-
 					}
 				}
-
 			}
 
 			/************************************************************
@@ -124,7 +122,18 @@ class DatabaseJSON extends CI_Model
 						$this->ressources_by_thematique[$key] = array() ;
 					}
 					array_push($this->ressources_by_thematique[$key], $ressource) ; // on ajoute la ressource à la thematique
+
+					$timeline_id = $ressource->getTimelineId() ;
+					if (! isset($this->thematiques_by_timeline[$timeline_id]))
+					{
+						$this->thematiques_by_timeline[$timeline_id] = array() ;
+					}
+					$thematique = array();
+					$thematique["id"] = $key ;
+					$thematique["name"] = $value ;
+					$this->thematiques_by_timeline[$timeline_id][$key] = $thematique ; // on ajoute la thematique à la timeline
 				}
+
 
 				if ($ressource->getType() == Item::TYPE_SON){
 					array_push($this->ressources_son, $ressource) ;
@@ -416,5 +425,39 @@ class DatabaseJSON extends CI_Model
 	{
 		$this->participants = $participants;
 	}
+
+	/**
+	 * @return array
+	 */
+	public function getThematiquesByTimeline(): array
+	{
+		return $this->thematiques_by_timeline;
+	}
+
+	/**
+	 * @param array $thematiques_by_timeline
+	 */
+	public function setThematiquesByTimeline(array $thematiques_by_timeline): void
+	{
+		$this->thematiques_by_timeline = $thematiques_by_timeline;
+	}
+
+	/**
+	 * @return array|null
+	 */
+	public function getTableInfosTimeline(): ?array
+	{
+		return $this->table_infos_timeline;
+	}
+
+	/**
+	 * @param array|null $table_infos_timeline
+	 */
+	public function setTableInfosTimeline(?array $table_infos_timeline): void
+	{
+		$this->table_infos_timeline = $table_infos_timeline;
+	}
+
+
 
 }

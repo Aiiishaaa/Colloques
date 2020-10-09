@@ -20,6 +20,7 @@
 								$datas = array();
 								$datas["timeline_id"] = $conference["id"];
 								$datas["timeline_name"] = $conference["nom"];
+								$datas["thematiques"] = $db->getThematiquesByTimeline()[$conference["id"]];
 								$this->load->view('templates/card-timeline', $datas);
 							}
 						?>
