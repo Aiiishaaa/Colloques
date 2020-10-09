@@ -115,22 +115,24 @@ header {
   ============= */
   .navbar{
     position: fixed;
-    box-shadow: 0 1px 0px -3px black;
+    box-shadow: 0 1px 0px 0px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    z-index: 1000;
   }
   /* Element de déco, Navbar, atour de la loupe*/
   .btn-search::before{
     content: "";
     position: absolute;
-    width: 40px;
-    height: 38px;
+    width: 50px;
+    height: 45px;
     border: 1px solid black;
     border-radius: 5px;
-    top: 0;
-    left: 0;
+    top: -4px;
+    left: -6px;
   }
   /*Pour une meilleur symétrie, déplace la loupe à droite en petite résolution*/
   button.btn-search{
-    right: 0;
+    right: 25px;
   }
    /* ==========
     FOOTER
