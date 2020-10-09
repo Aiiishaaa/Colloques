@@ -1,4 +1,4 @@
-
+	<div class="container">
       <div class="row" id="mentionslegales">
         <div class="col-sm-6 offset-sm-3">
             <h1>Mentions légales</h1>
@@ -79,3 +79,4 @@
             </p>
         </div>
     </div>
+</div>
