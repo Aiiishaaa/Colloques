@@ -242,7 +242,11 @@ class DatabaseJSON extends CI_Model
 
 	public function  getRessourcesByTimeline ($idTimeline)
 	{
-		return $this->ressources_by_timeline[$idTimeline] ;
+		if (isset($this->ressources_by_timeline[$idTimeline]))
+		{
+			return $this->ressources_by_timeline[$idTimeline] ;
+		}
+		else return array() ;
 	}
 
 	/***************************************************************************
