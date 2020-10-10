@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Les colloques CERISY &bull; <?= $titre ?></title>
+    <title>Territoire Solidaire en Commun &bull; <?= $titre ?></title>
 	<meta name="description" content="<?= $description_SEO ?>" />
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -26,7 +26,7 @@
 	<!---- CODE OPEN GRAPH (FACEBOOK) -->
 	<meta property="og:type" content="article">
 	<meta property="og:title" content="<?= $meta_infos["titre"] ?>">
-	<meta property="og:site_name" content="Les colloques CERISY • TERRITOIRES SOLIDAIRES EN COMMUN">
+	<meta property="og:site_name" content="TERRITOIRES SOLIDAIRES EN COMMUN • Les colloques CERISY">
 	<meta property="og:url" content="<?= $_SERVER['REQUEST_URI'] ?>">
 	<meta property="og:image" content="<?= $meta_infos["image"] ?>">
 	<meta property="article:published_time" content="2020-10-15">
@@ -34,7 +34,7 @@
 	<!---- CODE TWITTER CARD ---->
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:site" content="@"> <!-- saisir le nom du compte twitter -->
-	<meta name="twitter:title" content="Les colloques CERISY • <?= $meta_infos["titre"] ?>">
+	<meta name="twitter:title" content="TERRITOIRES SOLIDAIRES EN COMMUN • <?= $meta_infos["titre"] ?>">
 	<meta name="twitter:description" content="Retrouvez <?= $meta_infos["titre"] ?>">
 	<meta name="twitter:image" content="<?= $meta_infos["image"] ?>">
 	<?php } ?>
