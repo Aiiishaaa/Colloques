@@ -248,6 +248,27 @@ header {
 	}
 }
 
+.custom-edition,
+.custom-card-row {
+	background: linear-gradient(#008800, #008800);
+	background-size: 3px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.custom-card-row {
+	background-size: 40% 3px;
+	background-position: 16%;
+}
+
+.custom-card-row:nth-child(odd) {
+	background-position: 84%;
+}
+
+.custom-edition-row {
+	background-color: #fff;
+}
+
 /*--- Sidebar ---*/
 .aside > * {
 	display: flex;
