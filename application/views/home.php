@@ -18,11 +18,14 @@ foreach ($timelines as $date_array) {
 		<div class="row justify-content-center custom-card-row">
 			<div class="col-12 col-md-6 col-lg-4 col-xl-3">
 				<?php
-		$datas = array();
+$datas = array();
         $datas["timeline_id"] = $conference["id"];
         $datas["timeline_name"] = $conference["nom"];
-        $datas["thematiques"] = array() ;
-        if (isset($db->getThematiquesByTimeline()[$conference["id"]])) $datas["thematiques"] = $db->getThematiquesByTimeline()[$conference["id"]];
+        $datas["thematiques"] = array();
+        if (isset($db->getThematiquesByTimeline()[$conference["id"]])) {
+            $datas["thematiques"] = $db->getThematiquesByTimeline()[$conference["id"]];
+        }
+
         $this->load->view('templates/card-timeline', $datas);?>
 	</div>
 </div>
